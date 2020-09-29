@@ -1,7 +1,11 @@
 import React from 'react';
 import {View, SafeAreaView, Text, Image, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 
-const TelaInicial = () => {
+const TelaInicial = ({navigation}) => {
+  const handleChangeScreen =() =>{
+      navigation.navigate('Entrar')
+    }
   return(
     <>
     <SafeAreaView style={{backgroundColor:'#fff3db'}}>
@@ -18,7 +22,7 @@ const TelaInicial = () => {
           <TouchableOpacity style={styles.buttonAbri}>
             <Text style={styles.buttonAbriTexto}>Abrir Conta</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.buttonEntrar}>
+          <TouchableOpacity style={styles.buttonEntrar} onPress={handleChangeScreen}>
             <Text style={styles.buttonEntrarTexto}>Entrar</Text>
           </TouchableOpacity>
         </ImageBackground>
@@ -78,7 +82,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     width: 360, 
     height: 200,
-    marginTop:248
+    marginTop:225
   }
 })
 

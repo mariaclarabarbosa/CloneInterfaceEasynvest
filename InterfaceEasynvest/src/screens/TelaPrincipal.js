@@ -1,13 +1,14 @@
 import React from 'react';
 import {Text, SafeAreaView, Image, StyleSheet, View, TouchableOpacity} from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 
 const TelaPrincipal = () => {
   return (
     <>
-      <SafeAreaView style={{backgroundColor:'#fffcf5'}}>
+      <SafeAreaView style={{backgroundColor:'#fffdf7'}}>
       <View style={styles.viewImage}>
         <Image source={require('../assets/images/logo-easynvest.png')} style={styles.imagem}/>
-        <Image source={require('../assets/images/eye-visible.png')} style={{marginTop: 45}}/>
+        <Image source={require('../assets/images/eye-visible.png')} style={{marginTop: 15}}/>
       </View>
         <View style={styles.viewPrincipal}>
           <Text style={{fontSize: 20, color: '#858585'}}>Meu patrimônio</Text>
@@ -51,24 +52,23 @@ const styles = StyleSheet.create({
   imagem:{
     width: 50, 
     height: 40,
-    marginTop: 50,
+    marginTop: 20,
     marginLeft: 20
   },
   viewImage:{
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginHorizontal: 20,
-    marginTop: 20
   },
   viewPrincipal:{
-    marginTop: 40,
+    marginTop: 30,
     marginBottom:20,
     alignItems: 'center',
 
   },
   viewSecundaria: {
     alignItems: 'center',
-    marginTop: 20,
+    marginTop: 10,
   },
   titulos: {
     color: '#858585',
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     paddingBottom: 0
   },
   viewMenus:{
-    marginTop: 120,
+    marginTop: 113,
     marginHorizontal: 20,
     flexDirection: 'row',
     justifyContent: 'space-around',

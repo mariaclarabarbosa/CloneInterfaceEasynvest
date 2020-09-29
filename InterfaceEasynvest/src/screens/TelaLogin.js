@@ -1,20 +1,23 @@
 import React, {useState} from 'react'
 import {Text, SafeAreaView, TouchableOpacity, StyleSheet, TextInput, View} from 'react-native'
+import { NavigationContainer } from '@react-navigation/native';
 
-const Login = () => {
-
+const Login = ({navigation}) => {
+  const handleChangeScreen = () => {
+    navigation.navigate('Acompanhar')
+  }
     return(
         <>
-        <SafeAreaView style={{backgroundColor:'#fffcf5'}}>
-          <View style={{marginTop:120, marginHorizontal:30}}>
+        <SafeAreaView style={{backgroundColor:'#fffdf7'}}>
+          <View style={{marginTop:70, marginHorizontal:30}}>
             <TextInput placeholder='CPF ou Email' style={styles.input}></TextInput>
             <TextInput placeholder='Senha' style={styles.input} secureTextEntry={true}></TextInput>
           </View>
-          <View style={{marginBottom: 305}}>
+          <View style={{marginBottom: 255}}>
             <TouchableOpacity style={styles.buttonEsq}>
               <Text style={styles.texto}>Esqueci minha senha</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={handleChangeScreen}>
               <Text style={styles.buttonText}>Entrar</Text>
             </TouchableOpacity>
           </View>
@@ -29,7 +32,7 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     borderBottomWidth: 2,
     padding: 15,
-    paddingBottom:5,
+    paddingBottom:2,
   },
   buttonEsq: {
     marginHorizontal: 115,
