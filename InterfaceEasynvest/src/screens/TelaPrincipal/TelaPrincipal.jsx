@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Text, SafeAreaView, Image, View, FlatList, TouchableOpacity} from 'react-native';
 import styles from './Styles.jsx'
-import Button from '../../components/Button.jsx'
 import ButtonMenus from '../../components/ButtonMenus.jsx'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -37,10 +36,6 @@ const TelaPrincipal = () => {
           <TouchableOpacity onPress={visibilidade}>
             <Ionicons name={icon} size={20} style={styles.visible}/>
           </TouchableOpacity>
-          {/* <Image 
-            source={require('../../assets/images/eye-visible.png')} 
-            style={styles.imagem2}
-          /> */}
         </View>
         <View style={styles.viewPrincipal}>
           <Text style={styles.texto1}>Meu patrimônio</Text>
