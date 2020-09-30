@@ -1,9 +1,9 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import TelaInicial from '../screens/TelaInicial.js'
-import Login from '../screens/TelaLogin.js'
-import TelaPrincipal from '../screens/TelaPrincipal.js'
+import TelaInicial from '../screens/TelaInicial/TelaInicial.jsx'
+import Login from '../screens/TelaLogin/TelaLogin.jsx'
+import TelaPrincipal from '../screens/TelaPrincipal/TelaPrincipal.jsx'
 
 const Stack = createStackNavigator();
 
