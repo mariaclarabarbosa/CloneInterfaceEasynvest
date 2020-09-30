@@ -2,7 +2,8 @@ import {StyleSheet} from 'react-native'
 
 const styles = StyleSheet.create({
     tela:{
-      backgroundColor:'#fffdf7'
+      backgroundColor:'#fff',
+      flex: 1
     },
     viewInput: {
       marginTop:70, marginHorizontal:30

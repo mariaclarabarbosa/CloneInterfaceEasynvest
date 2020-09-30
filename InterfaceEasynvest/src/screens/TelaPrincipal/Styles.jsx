@@ -2,7 +2,8 @@ import {StyleSheet} from 'react-native'
 
 const styles = StyleSheet.create({
     tela:{
-        backgroundColor:'#fffdf7'
+        backgroundColor:'#fff',
+        flex: 1
     },
     imagem1:{
         width: 50, 
@@ -59,17 +60,19 @@ const styles = StyleSheet.create({
     },
     textMenus:{
         color: '#858585',
-        paddingHorizontal: 7
+        paddingRight: 7,
+        paddingLeft: 2,
+        fontSize: 12,
     },
     textIndiqueGanhe:{
         color: '#660178',
         fontWeight: 'bold',
-        paddingTop: 5,
-        paddingBottom: 0
+        paddingBottom: 0,
+        fontSize: 12
     },
     viewMenus:{
-        marginTop: 113,
-        marginHorizontal: 20,
+        marginTop: 200,
+        marginHorizontal: 15,
         flexDirection: 'row',
         justifyContent: 'space-around',
     },
@@ -83,13 +86,17 @@ const styles = StyleSheet.create({
         backgroundColor: '#6ce5f0'
     },
     menus:{
-        paddingHorizontal: 14,
-        paddingVertical: 7,
+        paddingHorizontal: 16,
+        paddingVertical: 10,
         borderStyle: 'solid',
-        borderWidth: 2,
+        borderWidth: 1,
         borderRadius: 10,
         borderColor: '#dbdbdb'
     },
+    visible:{
+        marginTop: 30,
+        marginRight: 20
+    }
   })
   
   export default styles;

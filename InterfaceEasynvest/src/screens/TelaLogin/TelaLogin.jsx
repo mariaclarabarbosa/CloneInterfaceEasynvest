@@ -6,14 +6,26 @@ import styles from './Styles.jsx'
 
 const Login = ({navigation}) => {
   const handleChangeScreen = () => {
-    navigation.navigate('Acompanhar')
+    navigation.reset({
+      index:0,
+      routes: [{name: 'Root'}]
+    })
   }
     return(
         <>
         <SafeAreaView style={styles.tela}>
           <View style={styles.viewInput}>
-            <TextInput placeholder='CPF ou Email' style={styles.input}/>
-            <TextInput placeholder='Senha' style={styles.input} secureTextEntry={true}/>
+            <TextInput 
+              placeholder='CPF ou Email' 
+              style={styles.input}
+              accessibilityLabel='Inserir CPF ou Email'
+            />
+            <TextInput 
+              placeholder='Senha' 
+              style={styles.input} 
+              secureTextEntry={true}
+              accessibilityLabel='Inserir senha'
+            />
           </View>
           <View style={styles.viewButtons}>
             <Button 
