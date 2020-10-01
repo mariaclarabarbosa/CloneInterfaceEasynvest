@@ -11,7 +11,7 @@ const TelaInicial = ({navigation}) => {
   return(
     <>
     <SafeAreaView style={styles.tela}>
-      <View>
+      <View style={styles.viewText}>
         <Text style={styles.textoPrincipal}>
           Que bom que você está aqui
         </Text>

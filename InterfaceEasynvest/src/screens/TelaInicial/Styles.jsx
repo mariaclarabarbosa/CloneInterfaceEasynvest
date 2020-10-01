@@ -2,7 +2,8 @@ import {StyleSheet} from 'react-native'
 
 const styles = StyleSheet.create({
   tela:{
-    backgroundColor:'#fff3db'
+    backgroundColor:'#fff3db',
+    flex: 1
   },
   textoPrincipal: {
     marginHorizontal: 30,
@@ -53,6 +54,9 @@ const styles = StyleSheet.create({
     width: 360, 
     height: 200,
     marginTop:225
+  },
+  viewText:{
+    marginBottom: 23
   }
 })
 export default styles;
