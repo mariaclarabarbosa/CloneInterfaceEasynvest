@@ -7,7 +7,7 @@ const ButtonMenus = ({texto, onPress, icon, iconColor, text}) => {
   return(
     <>
       <TouchableOpacity style={styles.menus} onPress={onPress}>
-        <Ionicons name={icon} color={iconColor} size={25} />
+        <Ionicons name={icon} color={iconColor} size={25} style={styles.icones}/>
         <Text style={styles.textMenus2}>{text}</Text>
         <Text style={styles.textMenus}>{texto}</Text>
       </TouchableOpacity>

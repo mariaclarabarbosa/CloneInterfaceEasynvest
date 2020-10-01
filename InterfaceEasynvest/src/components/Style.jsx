@@ -23,6 +23,9 @@ const styles = StyleSheet.create({
         fontSize: 12,
         paddingTop: 8
       },
+      icones:{
+          paddingRight: 70
+      }
 })
 
 export default styles;
