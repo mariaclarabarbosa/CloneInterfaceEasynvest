@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
-import {Text, SafeAreaView, TouchableOpacity, StyleSheet, TextInput, View} from 'react-native'
-import { NavigationContainer } from '@react-navigation/native';
+import {SafeAreaView, TextInput, View} from 'react-native'
 import Button from '../../components/Button.jsx'
 import styles from './Styles.jsx'
 

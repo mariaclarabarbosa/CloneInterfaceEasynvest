@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Text, SafeAreaView, Image, View, FlatList, TouchableOpacity} from 'react-native';
+import {Text, SafeAreaView, Image, View, VirtualizedList,TouchableHighlight, TouchableOpacity, FlatList} from 'react-native';
 import styles from './Styles.jsx'
 import ButtonMenus from '../../components/ButtonMenus.jsx'
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -25,6 +25,37 @@ const TelaPrincipal = () => {
     }
   }
 
+  const DATA = [
+    {
+      id: '1',
+      text: '',
+      texto:'Indique e ganhe', 
+      icons: 'gift-outline',
+      iconColor: 'purple'
+    },
+    {
+      text: 'Meus',
+      texto:'Investimentos', 
+      id: '2',
+      icons: 'wallet-outline',
+      iconColor: 'purple'
+    },
+    {
+      text: '',
+      texto:'Rendimento', 
+      id: '3',
+      icons: 'bar-chart-outline',
+      iconColor: 'purple'
+    },
+    {
+      text: 'Conta',
+      texto:'EasyInvest', 
+      id: '4',
+      icons: 'cash-outline',
+      iconColor: 'purple'
+    }
+  ];
+
   return (
     <>
       <SafeAreaView style={styles.tela}>
@@ -49,21 +80,19 @@ const TelaPrincipal = () => {
           <Text style={styles.textDinheiro}>R$ {conta}</Text>
         </View>
         <View style={styles.viewMenus}>
-          <ButtonMenus 
-            buttonStyle={styles.menuIndiqueGanhe}
-            textStyle={styles.textIndiqueGanhe}
-            texto='Indique e ganhe'
-            icon='gift-outline'
-            iconColor='white'
-          />
-          <ButtonMenus 
-            buttonStyle={styles.menus}
-            textStyle={styles.textMenus}
-            tStyle={{color: '#858585', fontSize: 12, paddingTop: 5, paddingHorizontal: 2}}
-            text='Meus'
-            texto='Investimentos'
-            icon='wallet-outline'
-            iconColor='purple'
+          <FlatList
+            data={DATA}
+            renderItem={({ item }) => (
+              <ButtonMenus
+                icon={item.icons}
+                iconColor={item.iconColor}
+                texto={item.texto}
+                text={item.text}
+              />
+            )}
+            keyExtractor={item => item.id}
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
           />
         </View>
       </SafeAreaView>

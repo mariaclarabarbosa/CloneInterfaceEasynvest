@@ -19,9 +19,15 @@ const TabNavigator = () => {
                     style: { backgroundColor: '#fff',
                     borderTopColor: '#dbdbdb',
                     borderStyle: 'solid',
-                    borderTopWidth: 2,
+                    borderTopWidth: 1,
                     },
+                    indicatorStyle:{
+                        height: 3,
+                        backgroundColor: 'purple',
+                        top: 0
+                    }
                 }}
+                swipeEnabled={false}
             >
                 <Tab.Screen 
                     name='Acompanhar' 

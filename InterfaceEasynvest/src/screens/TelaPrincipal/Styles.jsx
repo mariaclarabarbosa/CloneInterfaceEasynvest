@@ -58,12 +58,6 @@ const styles = StyleSheet.create({
     buttonText:{
         color: '#858585',
     },
-    textMenus:{
-        color: '#858585',
-        paddingRight: 7,
-        paddingLeft: 2,
-        fontSize: 12,
-    },
     textIndiqueGanhe:{
         color: '#660178',
         fontWeight: 'bold',
@@ -91,7 +85,8 @@ const styles = StyleSheet.create({
         borderStyle: 'solid',
         borderWidth: 1,
         borderRadius: 10,
-        borderColor: '#dbdbdb'
+        borderColor: '#dbdbdb',
+        margin: 10
     },
     visible:{
         marginTop: 30,

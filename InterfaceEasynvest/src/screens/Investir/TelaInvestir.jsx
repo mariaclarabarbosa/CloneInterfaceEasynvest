@@ -1,9 +1,12 @@
 import React from 'react'
-import {Text} from 'react-native'
+import {Text, SafeAreaView} from 'react-native'
 
 const Investir = () => {
     return(
-        <Text>Essa é a tela Investir</Text>
+        <SafeAreaView style={{backgroundColor: '#fff', flex: 1}}>
+            <Text>Essa é a tela Investir</Text>
+
+        </SafeAreaView>
     )
 }
 
