@@ -65,7 +65,7 @@ const TelaPrincipal = () => {
             style={styles.imagem1}
           />
           <TouchableOpacity onPress={visibilidade}>
-            <Ionicons name={icon} size={20} style={styles.visible}/>
+            <Ionicons name={icon} size={25} color='purple' style={styles.visible}/>
           </TouchableOpacity>
         </View>
         <View style={styles.viewPrincipal}>
